@@ -1,0 +1,15 @@
+import numpy as np
+from PIL import Image
+
+def load_data(file_paths, target_size=(256, 256)):
+    images = []
+    for file_path in file_paths:
+        img = Image.open(file_path)
+        img = img.resize(target_size)
+        img_array = np.array(img) / 255.0  # Normalize pixel values
+        images.append(img_array)
+    return np.array(images)
+
+# Example usage:
+# X_train = load_data(train_file_paths)
+# X_test = load_data(test_file_paths)
