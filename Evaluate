@@ -1,0 +1,6 @@
+def evaluate_model(model, X_test, y_test):
+    loss, accuracy = model.evaluate(X_test, y_test)
+    print("Test Accuracy:", accuracy)
+
+# Example usage:
+# evaluate_model(model, X_test, y_test)
