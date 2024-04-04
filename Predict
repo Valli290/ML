@@ -1,0 +1,5 @@
+def predict(model, X):
+    return model.predict(X)
+
+# Example usage:
+# predictions = predict(model, X_test)
